@@ -5,7 +5,7 @@ from .models import Album
 # Create your views here.
 
 def index(request):
-          return HttpResponse("<h1>This is the Music app home page </h1>")
+          return HttpResponse("<h1>This is the New Music app home page </h1>")
 
 def details(request, album_id):
     try:
