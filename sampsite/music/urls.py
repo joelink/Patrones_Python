@@ -12,6 +12,6 @@ urlpatterns = [
     #music/album_id/favorite
     url(r'^(?P<album_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
 
-    url(r'^lista/', views.list, name='list')
+    url(r'^list/', views.list, name='list')
 
 ]
