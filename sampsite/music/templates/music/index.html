@@ -7,16 +7,13 @@
 <body>
 {% extends 'music/base.html' %}
 {% block  body %}
-    {% if all_Albums %}
-    <h2>Here you can see all Albums:</h2>
+
     <ul>
-        {% for album in all_Albums %}
+        {% for album in object_list %}
         <li><a href = "{% url 'music:detail' album.id %}"> {{ album.album_title }}</a></li>
         {% endfor %}
    </ul>
-    {% else %}
-    <h2>You don't have any Albums </h2>
-    {% endif %}
+
 {% endblock %}
 </body>
 </html>
