@@ -9,7 +9,12 @@
     <img src="{{album.album_logo}}">
     <h1>{{ album.album_title }} </h1>
     <h3> {{ album.artist }}</h3>
+    (% if error_mesage %}
+        <p><strong>{{Error_message}}</strong></p>
+    {% end if %}
+    <form action="{% url 'music:favorite' album.id %}">
 
+    </form>
     <ul>
         {% for song in album.song_set.all %}
             <li>{{ song.song_title }} - {{ song.file_type }} </li>
