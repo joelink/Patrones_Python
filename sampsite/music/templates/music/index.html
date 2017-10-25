@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% extends 'music/base.html' %}
+{% block  body %}
+
+    <ul>
+        {% for album in object_list %}
+        <li><a href = "{% url 'music:detail' album.id %}"> {{ album.album_title }}</a></li>
+        {% endfor %}
+   </ul>
+
+{% endblock %}
+</body>
+</html>
